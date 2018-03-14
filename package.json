@@ -4,6 +4,7 @@
   "description": "Vulners Service",
   "main": "index.js",
   "scripts": {
+    "build-dev": "cross-env NODE_ENV=development webpack",
     "start": "cross-env NODE_ENV=development babel-node devServer"
   },
   "author": "Dmitry Khamchenko",
