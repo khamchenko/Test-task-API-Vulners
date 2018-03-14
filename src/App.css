@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat|Roboto);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 50px 'Caveat', cursive;
+    background: #c3c3c3;
+    margin: 0;
+}
+
+#root {
+    min-width: 340px;
+}
+
+button:focus{ outline: none;}
+
+input[type="text"]:focus { outline: none;}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+textarea{
+    border: none;
+    resize: none;
+    overflow: auto;
+}
+
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:5px;
+height:0px
+}
+
+::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:#6b1418;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:#56999f;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}

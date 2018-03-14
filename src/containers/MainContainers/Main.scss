@@ -1,0 +1,26 @@
+.main {
+    position: absolute;
+    height: calc(100% - 222px);
+    width: 100%;
+    min-width: 340px;
+    background: url(https://blogvulners.files.wordpress.com/2017/06/cropped-background1.jpg);
+    background-size: cover;
+    .main-wrapper{
+        padding-top: 15%;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        .logo{
+            display: block;
+            text-align: center;
+            .img{
+                width: 330px;
+            }
+        }
+        .info {
+            font-size: 30px;
+        }
+    }
+}

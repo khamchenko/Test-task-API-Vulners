@@ -1,0 +1,105 @@
+.favorites-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #1b1b1b;
+    border: 2px solid #1b1b1b;
+    color: #fff;
+    margin: 5px;
+    font-size: 15px;
+    padding: 10px;
+    .header-item {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 18px;
+        .title-item {
+            display: flex;
+            overflow: hidden;
+            .like {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                .icon-like {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .type {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #929292;
+                margin: 0 10px;
+                border-radius: 10px;
+                width: 100px;
+            }
+            .title-wrapper{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                .title {
+                    margin: 5px 0;
+                    padding: 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .edit {
+                    margin: 0 10px;
+                    color: #808080;
+                }
+            }
+        }
+    }
+    .description {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .description-text{
+            width: 90%;
+            padding: 5px;
+            border-radius: 5px;
+            padding: 5px;
+            font: 16px 'Roboto', cursive;
+            word-wrap: break-word;
+        }
+        .href {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 50px;
+            border-radius: 10px;
+            .icon{
+                margin-top: 4px;
+                width: 30px;
+                height: 30px;
+                transform: rotate(-90deg);
+            }
+            &:hover {
+                background: #ff6021;
+            }
+        }
+    }
+    .btn{
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px 0;
+        .icon-wrapper{
+            background:#ff6021;
+            margin: 0 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            .icon{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

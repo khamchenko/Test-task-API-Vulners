@@ -1,0 +1,17 @@
+.menu {
+    background: #ff6021;
+    display: flex;
+    padding: 0 20px;
+    font-size: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    .menu-elem {
+        padding: 0 10px;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+            background: #1b1b1b;
+        }
+    }
+}

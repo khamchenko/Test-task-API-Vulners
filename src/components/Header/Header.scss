@@ -1,0 +1,16 @@
+.header {
+    color: #fff;
+    display: flex;
+    background: #1b1b1b;
+    padding: 20px;
+    .logo {
+        width: 150px;
+    }
+    .title {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

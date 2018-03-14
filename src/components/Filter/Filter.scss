@@ -1,0 +1,35 @@
+.filter{
+    background: #313131;
+    color: #fff;
+    font-size: 35px;
+    .wrapper-filter{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .title{
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .filter-elements{
+            display: flex;
+            justify-content: flex-start;
+            flex-grow: 3;
+            .filter-elem{
+                padding: 0 10px;
+                cursor: pointer;
+                .icon{
+                    margin-left: 15px;
+                    width: 20px;
+                }
+                .arrow-up{
+                    transform: rotate(180deg);
+
+                }
+                &:hover {
+                    background: #525252;
+                }
+            }
+        }
+    }
+}
