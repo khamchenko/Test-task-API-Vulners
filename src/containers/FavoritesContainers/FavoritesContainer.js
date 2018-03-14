@@ -7,12 +7,10 @@ import Loader from '../../components/Loader';
 import Notice from '../../components/Notice';
 
 import {
-    deleteFavorites, 
+    deleteFavorites,
     editFavorites,
     filterFavorites
 } from '../../redux/actions/FavoritesActions';
-
-import './Favorites.scss';
 
 const FavoritesContainer = (props) => (
     <div className="favorites">

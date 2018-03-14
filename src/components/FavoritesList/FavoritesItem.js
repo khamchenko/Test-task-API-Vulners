@@ -78,10 +78,10 @@ class FavoritesItem extends Component {
                                 {title}
                             </div>
                             <div>
-                                <span>{modified.substr(0, 10)}</span>
+                                <div>{modified.substr(0, 10)}</div>
                                 {
                                     edit
-                                        ? <span className="edit">
+                                        ? <div className="edit">
                                                 edit:&nbsp;
                                                 <span>{new Date(edit).getFullYear()}-</span>
                                                 <span>{new Date(edit).getMonth() + 1 > 10
@@ -89,7 +89,7 @@ class FavoritesItem extends Component {
                                                     : `0${new Date(edit).getMonth() + 1}`}-</span>
                                                 <span>{new Date(edit).getDate() + 1}</span>
                                                 <span></span>
-                                        </span>
+                                        </div>
                                         : null
                                 }
                             </div>

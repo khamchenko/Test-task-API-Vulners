@@ -5,8 +5,6 @@ import VendorsList from '../../components/VendorsList';
 import Loader from '../../components/Loader';
 import Notice from '../../components/Notice';
 
-import './Vendors.scss';
-
 const VendorsContainer = (props) => (
     <div className="vendors">
         {

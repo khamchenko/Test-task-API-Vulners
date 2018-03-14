@@ -2,7 +2,6 @@ import { RSAA } from 'redux-api-middleware';
 
 import { API, PROXY_CORS } from '../../../config.js';
 
-
 import constants from '../constants';
 
 export const loadVenders = () => {

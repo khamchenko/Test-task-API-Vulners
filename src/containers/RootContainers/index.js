@@ -8,8 +8,6 @@ import { loadVenders } from '../../redux/actions/VendorsActions';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
-import './RootLayout.scss'
-
 class RootLayout extends Component {
     componentDidMount() {
         this.props.loadVenders();

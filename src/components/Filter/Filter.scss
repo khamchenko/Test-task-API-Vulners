@@ -1,11 +1,13 @@
 .filter{
     background: #313131;
     color: #fff;
-    font-size: 35px;
+    font-size: 26px;
+    padding: 5px 0;
     .wrapper-filter{
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        margin: 5px 0;
         .title{
             display: flex;
             justify-content: center;
@@ -24,7 +26,6 @@
                 }
                 .arrow-up{
                     transform: rotate(180deg);
-
                 }
                 &:hover {
                     background: #525252;

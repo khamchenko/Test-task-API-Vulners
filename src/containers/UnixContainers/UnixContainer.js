@@ -5,8 +5,6 @@ import UnixList from '../../components/UnixList';
 import Loader from '../../components/Loader';
 import Notice from '../../components/Notice';
 
-import './Unix.scss';
-
 const UnixContainer = (props) => (
     <div className="unix">
         {
