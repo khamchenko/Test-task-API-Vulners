@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FavoritesItem.scss';
 
-import arrow from '../picture/sort-down.svg'
+import arrow from '../picture/arrow.svg';
 import Heart from '../picture/like.svg';
 import redHeart from '../picture/red-like.svg';
 import Delete from '../picture/delete.svg';

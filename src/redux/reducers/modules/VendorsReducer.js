@@ -19,20 +19,12 @@ const VendorsReducer = (state = initialState, action) => {
             let data = action.payload.data.type_results;
             let vendorsKeys = keys(data);
             let vendors = [];
-            let unix = [];
             forEach(vendorsKeys, key => {
-                if (data[key].bulletinFamily !== 'unix') {
-                    vendors.push({ key: key, data: data[key] })
-                } else {
-                    unix.push({ key: key, data: data[key] })
-                }
+                vendors.push({ key: key, data: data[key] })
             })
             return {
                 ...state,
-                data: {
-                    vendors: vendors,
-                    unix: unix
-                },
+                data: vendors,
                 isLoading: false
             };
         case constants.LOAD_VENDERS_FAIL:

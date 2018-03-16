@@ -19,7 +19,7 @@ const VendorsContainer = (props) => (
 
 const mapStateToProps = ({ vendors: { error, data , isLoading }}) => {
     return {
-        vendors: data.vendors || [],
+        vendors: data || [],
         isLoading: isLoading,
         error: error || false
     };

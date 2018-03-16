@@ -20,7 +20,7 @@ class EntryField extends Component {
 
     handlerText(e) {
         let data = filter(this.props.data, (item, index) => {
-            return item.key.indexOf(e.target.value) == 0
+            return item.key.indexOf(e.target.value.toLowerCase()) == 0
         })
         this.setState({
             text: e.target.value,

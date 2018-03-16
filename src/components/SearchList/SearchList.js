@@ -5,10 +5,15 @@ import SearchItem from './SearchItem';
 
 import './SearchList.scss';
 
-
 class SearchList extends Component {
     render() {
-        const { vulner, favorites, deleteFavorites, addFavorites  } = this.props;
+        const {
+            vulner,
+            favorites,
+            deleteFavorites,
+            addFavorites
+        } = this.props;
+
         return (
             <div className="search-list">
                 {

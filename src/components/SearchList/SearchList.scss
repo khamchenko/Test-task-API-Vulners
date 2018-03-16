@@ -7,3 +7,33 @@
     margin: 20px auto;
     font: 20px 'Roboto', cursive;
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 250px;
+    .value {
+        padding: 10px;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        background: #1b1b1b;
+        cursor: pointer;
+        .icon{
+            width: 25px;
+            height: 25px;
+        }
+        .arrow-right{
+            transform: rotate(-90deg);
+        }
+        .arrow-left{
+            transform: rotate(90deg);
+        }
+    }
+}

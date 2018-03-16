@@ -2,7 +2,6 @@ import RootRoutes from '../containers/RootContainers';
 import MainRoutes from '../containers/MainContainers';
 import VendorsRoutes from '../containers/VendorsContainers';
 import SearchRoutes from '../containers/SearchContainers';
-import UnixRoutes from '../containers/UnixContainers';
 import FavoritesRoutes from '../containers/FavoritesContainers';
 
 
@@ -24,11 +23,6 @@ const routes = [
                 path: '/vendors',
                 exact: true,
                 component: VendorsRoutes
-            },
-            {
-                path: '/unix',
-                exact: true,
-                component: UnixRoutes
             },
             {
                 path: '/favorites',

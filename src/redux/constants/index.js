@@ -10,5 +10,6 @@ export default keyMirror({
 	ADD_FAVORITES: null,
 	DELETE_FAVORITES: null,
 	EDIT_FAVORITES: null,
-	FILTER_FAVORITES: null
+	FILTER_FAVORITES: null,
+	EDIT_QUERY_SEARCH: null
 })

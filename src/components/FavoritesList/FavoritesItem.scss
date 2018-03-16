@@ -17,6 +17,8 @@
         .title-item {
             display: flex;
             overflow: hidden;
+            flex-wrap: wrap;
+            width: 96%;
             .like {
                 display: flex;
                 justify-content: center;
@@ -39,7 +41,8 @@
             .title-wrapper{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
+                min-width: 320px;
+                margin: 5px 0;
                 .title {
                     margin: 5px 0;
                     padding: 0 10px;

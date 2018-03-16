@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Filter.scss';
-import arrow from '../picture/sort-down.svg';
+import arrow from '../picture/arrow.svg';
 
 export default class Filter extends Component {
     constructor() {

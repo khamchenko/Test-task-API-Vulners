@@ -1,7 +1,24 @@
 .vendors-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     max-width: 1000px;
     margin: 20px auto;
+    .type{
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        margin: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        .type-name{
+            margin-left: 30px;
+            color: #ff6021;
+            font-weight: bold;
+        }
+        .list-vendor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
 }
