@@ -38,6 +38,10 @@ const VulnerReducer = (state = initialState, action) => {
             } else {
                 return {
                     ...state,
+                    meta: {
+                        ...state.meta,
+                        total: ''
+                    },
                     error: new Error('Nothing found'),
                     isLoading: false
                 };

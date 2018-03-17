@@ -17,6 +17,7 @@ import './Search.scss';
 class SearchContainer extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             query: props.vulnerability.meta.query
         }
@@ -31,7 +32,7 @@ class SearchContainer extends Component {
         this.handlerSearchLocation();
     }
 
-    componentWillUnmount() {
+    handlerQuerySearch() {
         const { query } = this.state;
         this.props.editQuerySearch(query);
     }
@@ -40,12 +41,12 @@ class SearchContainer extends Component {
         let index = location.search.indexOf("?query=");
         if (index == 0) {
             let search = location.search;
-            let query = {
+            search = search.slice(7).split('&');
+            const query = {
                 ostype: '',
                 vendor: '',
                 paginator: 1
             }
-            search = search.slice(7).split('&');
 
             forEach(search, elem => {
                 if (elem.indexOf("ostype:") !== -1) {
@@ -62,6 +63,9 @@ class SearchContainer extends Component {
                 query: query
             })
             this.searchVulnerability(query)
+        } else {
+            let query = this.props.vulnerability.meta.query;
+            this.historyReplaceState(query)
         }
 
     }
@@ -69,39 +73,43 @@ class SearchContainer extends Component {
     handlerOStypeValue(value) {
         this.setState({
             query: {
+                ...this.state.query,
                 ostype: value,
                 vendor: '',
-                paginator: 1
             }
         })
     }
     handleVendorValue(value) {
         this.setState({
             query: {
+                ...this.state.query,
                 ostype: '',
                 vendor: value,
-                paginator: 1
             }
         })
     }
 
     handleClickSearch(e) {
         e.preventDefault();
-
-        const { query } = this.state;
-
+        let query = {
+            ...this.state.query,
+            paginator: 1
+        }
+        this.setState({
+            query: query
+        })
+        console.log(query);
         this.historyReplaceState(query);
+        this.props.editQuerySearch(query);
         this.props.searchVulnerability(query)
     }
 
     historyReplaceState(query) {
-        let search = '';
+        let search = '/search';
         if (query.ostype.length !== 0) {
             search = `?query=ostype:${query.ostype.toLowerCase()}&paginator=${query.paginator}`
         } else if (query.vendor.length !== 0) {
             search = `?query=vendor:${query.vendor.toLowerCase()}&paginator=${query.paginator}`
-        } else {
-            search = '/'
         }
         history.replaceState(null, null, search)
     }
@@ -114,14 +122,17 @@ class SearchContainer extends Component {
                 ...this.state.query,
                 paginator: --paginator
             }
+            this.historyReplaceState(query);
+            this.props.editQuerySearch(query);
             this.searchVulnerability(query);
-            this.historyReplaceState();
+
         } else if (paginator !== total && value == 'next') {
             let query = {
                 ...this.state.query,
                 paginator: ++paginator
             }
             this.historyReplaceState(query);
+            this.props.editQuerySearch(query);
             this.searchVulnerability(query)
         }
     }
@@ -145,7 +156,6 @@ class SearchContainer extends Component {
             addFavorites
         } = this.props;
         const { query } = this.state;
-
         return (
             <div>
                 <div className="search">
@@ -154,7 +164,7 @@ class SearchContainer extends Component {
                             <EntryField
                                 data={vendors}
                                 CheckValueSearch={this.handlerOStypeValue}
-                                placeholder="OS Type"
+                                placeholder="Search..."
                                 text={query.ostype}
                             />
                             <span>{'OR'}</span>
